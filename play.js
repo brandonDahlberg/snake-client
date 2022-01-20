@@ -9,6 +9,15 @@ const connect = function () {
 	conn.on('connect', data => {
 		console.log('server says: ', data);
 		conn.write('Name: BMD');
+		setTimeout(() => {
+			conn.write('Move: up');
+			setTimeout(() => {
+				conn.write('Move: up');
+				setTimeout(() => {
+					conn.write('Move: up');
+				}, 150);
+			}, 100);
+		}, 50);
 	});
 
 	// interpret incoming data as text
