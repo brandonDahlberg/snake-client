@@ -11,12 +11,6 @@ const connect = function () {
 		conn.write('Name: BMD');
 		setTimeout(() => {
 			conn.write('Move: up');
-			setTimeout(() => {
-				conn.write('Move: up');
-				setTimeout(() => {
-					conn.write('Move: up');
-				}, 150);
-			}, 100);
 		}, 50);
 	});
 
